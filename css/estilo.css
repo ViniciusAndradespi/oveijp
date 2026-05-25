@@ -1,0 +1,610 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#body1{
+    background-color: #440E03;
+}
+.header{
+    display: flex;
+    width: 100%;
+    position: fixed;
+    height: 80px;
+    z-index: 3;
+}
+.imgredonda{
+    border-radius: 50%;
+    height: 80px;
+    width: 30%;
+    display: flex;
+    
+}
+.imgredonda img{
+
+}
+nav{
+    z-index: 3;
+    display: flex;
+    width: 40%;
+    height: 80px;
+    top: 0;
+    left: 0;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+nav ul{
+    z-index: 3;
+    width: 100%;  
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+nav ul li{
+    z-index: 3;
+    list-style: none;
+    margin: 25px;
+    font-size: 24px;
+    font-family: 'Alfa Slab One', sans-serif;
+}
+
+nav ul a{   
+    text-decoration: none;
+    z-index: 3;
+    color: #ffe600;
+}
+
+.desligado{
+    color: rgb(180, 180, 180);
+    z-index: 3;
+
+}
+
+.content1{
+    display: flex;
+    align-items: center;  
+    margin: 0 0 0 16%;
+    width: 50%;
+}
+
+.botoes{
+    margin-top: 10%;
+    display: flex;
+    gap: 5%;
+}
+
+#reservezap{
+    border-radius: 10px;
+    background-color: green;
+    height: 46px;
+    width: 196px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    border: 2px solid green;
+    font-family: 'Alfa Slab One', sans-serif;
+}
+#reservezap a:hover span{
+   
+    color: blue;
+}
+
+#reservezap img{
+    height:auto;
+    width: 25px;
+    
+    filter: invert(1) brightness(2);
+}
+#cardapio{
+    border-radius: 10px;
+    border: 1px solid white;
+    height: 46px;
+    width: 196px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;  
+    gap: 8px;
+    font-family: 'Alfa Slab One', sans-serif;
+}
+#cardapio img{
+    height:auto;
+    width: 20px;
+    
+    filter: invert(1) brightness(2);
+}
+
+#fundo1{
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url('../img/fundo.jpeg');
+    background-size: cover;
+    background-position: center;   
+    display: flex;
+    border-radius: 0 0 30px 30px;
+    position: relative;
+}
+
+
+#bg2{
+    width: 100%;
+    height: 120vh;
+    background-color: #440E03;
+/*
+    background-image: 
+    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url('../img/bg2.png');
+    
+    background-size: 50% 85%;
+    background-repeat: repeat;
+    background-position: center;
+*/
+
+}
+
+.sobre{
+    font-family: 'Alfa Slab One', sans-serif;
+    font-size: 35px;
+    color: white; 
+    display: flex;
+    width: 50%;
+    padding: 2% 0 2% 0;
+    text-align: center;
+    justify-content: center;
+}
+
+
+#painel {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    height: 500px; 
+   
+}
+.bloco-esquerda {
+    width: 50%;
+    display: flex;
+}
+
+#foto1{
+    padding: 0 0 0 5%;
+    position: absolute;
+    box-sizing: border-box;
+    z-index: 2;
+
+}
+#foto1 img{
+    height: auto;
+    width: 25%;
+    box-shadow: 5px 5px 10px #111;
+    
+}
+#foto2{
+    padding: 30% 0 0 40%;
+    position: relative;  
+    box-sizing: border-box;   
+    z-index: 0;
+}
+#foto2 img{
+    height: auto;
+    width: 65%;
+    box-shadow: 5px 5px 10px #111;
+}
+
+.bloco-direita {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 35px;
+    color: white;
+    /*color: #FF6B00;*/
+    display: flex;
+    justify-content: center;
+    width: 40%;
+    
+    font-size: 20px;
+    align-items: center;
+    text-align: center;
+}
+
+
+
+
+
+#texto{
+    
+    margin-top: 0px;
+}
+
+
+.logo{
+    font-family: 'Alfa Slab One', sans-serif;
+    font-size: 120px;
+    color: #FF6B00;
+
+   text-shadow: 2px 2px 4px black;
+}
+
+
+.txt{
+    font-family: 'Alfa Slab One', sans-serif;
+    font-size: 40px;
+    color: #c45302;
+
+    margin-top: -20px;
+
+    text-shadow: 2px 2px 5px black;
+}
+
+
+.destaque{
+    background-color: #111;
+    padding: 40px;
+}
+
+.destaque h1{
+    color: white;
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.destaque .cards{
+    justify-content: center;
+}
+.cards{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding-left: 3.5%;
+        
+}
+
+
+.card{
+    width: 200px;
+    background-color: #1a1a1a;
+    padding: 10px;
+    border-radius: 10px;
+   
+}
+
+.card img{
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+
+    border-radius: 8px;
+}
+
+.card h2{
+    color: white;
+    margin-top: 10px;
+    font-size: 22px;
+
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.card p{
+    color: #cfcfcf;
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+.card span{
+    color: #ffe600;
+
+    display: block;
+
+    margin-top: 15px;
+
+    font-size: 24px;
+
+    font-family: 'Bebas Neue', sans-serif;
+}
+footer{
+    height: 120px;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+footer ul{
+    gap: 30px;
+    font-style: none;
+    list-style: none;
+   
+    display: flex;
+}
+footer ul a {
+    text-decoration: none;  
+    color: #3d3c3c;
+    font-size: 18px;
+    
+}
+.sobrelogo{
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    background-color: yellow;
+}
+.sobrelogo img{
+    
+    width: 300px;
+    height: auto;
+}
+#lados{
+    justify-content: space-between;
+    
+    width: 60%;
+    
+    display: flex;
+}
+#sobrecontainer{
+    width: 70%;
+    border-radius: 20px;
+    background-color: yellow;
+    padding: 20px;
+}
+#fundo2{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+#fundokids{
+    background-image: url(../img/areakids.png);
+    background-repeat; no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 0 0 30px 30px;
+}
+#fundokids h1{
+    color: white;
+    width: 100%;
+    font-family: 'Alfa Slab One', sans-serif;
+    font-size: 100px;
+    margin: 100px 0 0 0;
+}
+#fundokids p{
+    color: white;
+    width: 50%;
+    
+    font-size: 18px;
+    
+}
+#reservezap2{
+    border-radius: 10px;
+    box-sizing: border-box;
+    background-color: green;
+    height: 50px;
+    width: 230px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 7px;
+    margin-top: 5%;
+    padding: 10x;
+    font-family: 'Alfa Slab One', sans-serif;
+}
+#reservezap2 img{
+    height:auto;
+    width: 25px;
+    
+    filter: invert(1) brightness(2);
+}
+
+#fundokids2{
+    background-color: #111;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    
+}
+#body2{
+    background-color:#111;
+}
+#nossokids{
+    display: flex;
+    justify-content: center;
+}
+#fundokids2 h1{ 
+    margin: 5% 0 1% 0;
+    text-shadow: 4px 4px 6px #111;
+    font-size: 40px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+} 
+#mostruario{
+    height: 400px;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    gap: 4%;
+    align-items: center;
+}
+.cardkids{
+    height: 300px;  
+    width: 220px;
+    background-color: #1a1a1a;
+    border-radius: 10px 30px 10px 30px;
+    box-sizing: border-box;
+    padding: 1%;
+}
+.imgcardkids{
+    background-color: pink;
+    height: 250px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.imgcardkids img{
+    height: 250px;
+    width: 225px;
+    background-size: cover;
+}
+#fundokids3{
+    display: flex;
+    width: 100%;
+    background-color:#440e03;
+    height: 100vh;
+    align-items: center;
+}
+#imgkids3{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+#imgkids3 img{
+    width: 80%;
+    height: 100vh;
+
+}
+#txtkids3{
+    width: 40%;
+    color: white;
+}
+#listkids3{
+
+}
+#headkids3{
+    margin-bottom: 10%;
+    font-family: 'Alfa Slab One', sans-serif;
+    font-size: 25px;
+}
+#listkids3 li{
+    margin: 0 0 3% 0;
+    font-size: 20px;
+}
+
+#body3{
+    background-color: #1a1a1a;
+}
+#fundosobre1{
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url('../img/fundosobre8.jpg');
+    background-size: cover;
+    background-position: center; 
+    border-radius: 0 0 30px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+#fundosobre1 h1{
+    font-size: 100px;
+    color: white;
+    font-family: 'Alfa Slab One', sans-serif;
+    margin: 0 0 3.5% 0;   
+}
+#fundosobre2{
+    height: 100vh;
+    width: 100%;
+    background-color: #1a1a1a;
+}
+#painelsobre{
+    display: flex;
+    width: 100%;
+
+}
+#sobreesquerdo{
+    margin-top: 7%;
+    width: 50%;
+    color: white;
+    height: 50vh;
+}
+#headsobre{
+    width: auto;
+    padding: 0 0 0 10%;
+}
+#frameinfo{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding:  0 0 0 10%;
+    box-sizing: border-box;
+    margin: 3% 0 0 0;
+    gap: 10%;
+
+}
+#frameinfo iframe{
+    height: 100%;
+    box-sizing: border-box;
+}
+#infos{
+    width: 100%;
+    text-align: center;
+    align-items: right;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10%;
+}
+#lados1{
+    display: flex;
+    gap: 10%;
+    width: 100%;   
+}
+#lados1 img{
+    filter: invert(1) brightness(2);
+    height: 30px;
+    width: auto;
+}
+#lados2{
+    display: flex;
+    gap: 10%;
+    width: 100%;   
+}
+#lados2 img{
+    filter: invert(1) brightness(2);
+    height: 30px;
+    width: auto;
+}
+#painelsobre hr{
+    margin-top: 15%;
+}
+#sobredireito{
+    display: flex;
+    text-align: center;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 7%;
+    padding: 0 5% 0 5%;
+    box-sizing: border-box;
+    color: white;
+    font-size: 20px;
+}
