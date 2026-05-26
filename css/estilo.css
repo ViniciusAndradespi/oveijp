@@ -1,92 +1,186 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
-*{
+
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-#body1{
+/* ============================================================
+   HEADER / NAV
+   ============================================================ */
+#body1 {
     background-color: #440E03;
 }
-.header{
+
+.header {
     display: flex;
     width: 100%;
     position: fixed;
+    top: 0;
+    left: 0;
     height: 80px;
     z-index: 3;
+    background-color: rgba(0,0,0,0.35);
+    backdrop-filter: blur(4px);
+    align-items: center;
 }
-.imgredonda{
+
+.imgredonda {
     border-radius: 50%;
     height: 80px;
     width: 30%;
     display: flex;
-    
+    align-items: center;
+    padding-left: 10px;
 }
-.imgredonda img{
 
+.imgredonda img {
+    height: 70px;
+    width: auto;
 }
-nav{
+
+nav {
     z-index: 3;
     display: flex;
     width: 40%;
     height: 80px;
-    top: 0;
-    left: 0;
-    text-align: center;
     align-items: center;
     justify-content: center;
 }
 
-nav ul{
+nav ul {
     z-index: 3;
-    width: 100%;  
+    width: 100%;
     display: flex;
     align-items: center;
-    text-align: center;
     justify-content: center;
+    list-style: none;
 }
 
-nav ul li{
+nav ul li {
     z-index: 3;
     list-style: none;
-    margin: 25px;
+    margin: 0 25px;
     font-size: 24px;
     font-family: 'Alfa Slab One', sans-serif;
 }
 
-nav ul a{   
+nav ul a {
     text-decoration: none;
     z-index: 3;
     color: #ffe600;
 }
 
-.desligado{
+.desligado {
     color: rgb(180, 180, 180);
-    z-index: 3;
-
 }
 
-.content1{
+/* Hamburguer menu (mobile) */
+.menu-check {
+    display: none;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 6px;
+    padding: 10px 12px;
+    margin-left: auto;
+    margin-right: 12px;
+    background: rgba(255, 230, 0, 0.1);
+    border: 1.5px solid rgba(255, 230, 0, 0.35);
+    border-radius: 8px;
+    transition: background 0.25s ease, border-color 0.25s ease;
+}
+
+.menu-toggle:hover {
+    background: rgba(255, 230, 0, 0.2);
+    border-color: rgba(255, 230, 0, 0.65);
+}
+
+.menu-toggle span {
+    display: block;
+    width: 24px;
+    height: 2.5px;
+    background-color: #ffe600;
+    border-radius: 3px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform-origin: center;
+}
+
+/* Animação X quando aberto — CSS puro via :checked */
+.menu-check:checked ~ .menu-toggle span:nth-child(1) {
+    transform: translateY(8.5px) rotate(45deg);
+}
+.menu-check:checked ~ .menu-toggle span:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+}
+.menu-check:checked ~ .menu-toggle span:nth-child(3) {
+    transform: translateY(-8.5px) rotate(-45deg);
+}
+
+/* ============================================================
+   SECTION 1 – HERO (index)
+   ============================================================ */
+#fundo1 {
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url('../img/fundo.jpeg');
+    background-size: cover;
+    background-position: center;
     display: flex;
-    align-items: center;  
+    align-items: center;
+    border-radius: 0 0 30px 30px;
+    position: relative;
+}
+
+.content1 {
+    display: flex;
+    align-items: center;
     margin: 0 0 0 16%;
     width: 50%;
 }
 
-.botoes{
-    margin-top: 10%;
-    display: flex;
-    gap: 5%;
+#texto {
+    margin-top: 0px;
 }
 
-#reservezap{
+.logo {
+    font-family: 'Alfa Slab One', sans-serif;
+    font-size: 120px;
+    color: #FF6B00;
+    text-shadow: 2px 2px 4px black;
+    line-height: 1;
+}
+
+.txt {
+    font-family: 'Alfa Slab One', sans-serif;
+    font-size: 40px;
+    color: #c45302;
+    margin-top: -10px;
+    text-shadow: 2px 2px 5px black;
+}
+
+.botoes {
+    margin-top: 8%;
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+#reservezap {
     border-radius: 10px;
     background-color: green;
     height: 46px;
     width: 196px;
     color: white;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 18px;
     text-align: center;
     justify-content: center;
     align-items: center;
@@ -94,287 +188,219 @@ nav ul a{
     gap: 10px;
     border: 2px solid green;
     font-family: 'Alfa Slab One', sans-serif;
+    transition: opacity 0.2s;
 }
-#reservezap a:hover span{
-   
-    color: blue;
-}
+#reservezap:hover { opacity: 0.85; }
 
-#reservezap img{
-    height:auto;
+#reservezap img {
+    height: auto;
     width: 25px;
-    
     filter: invert(1) brightness(2);
 }
-#cardapio{
+
+#cardapio {
     border-radius: 10px;
-    border: 1px solid white;
+    border: 2px solid white;
     height: 46px;
     width: 196px;
     color: white;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 18px;
     text-align: center;
     justify-content: center;
     align-items: center;
-    display: flex;  
+    display: flex;
     gap: 8px;
     font-family: 'Alfa Slab One', sans-serif;
+    transition: background-color 0.2s;
 }
-#cardapio img{
-    height:auto;
+#cardapio:hover { background-color: rgba(255,255,255,0.1); }
+
+#cardapio img {
+    height: auto;
     width: 20px;
-    
     filter: invert(1) brightness(2);
 }
 
-#fundo1{
-    margin: 0;
+/* ============================================================
+   SECTION 2 – SOBRE (index)
+   ============================================================ */
+#bg2 {
     width: 100%;
-    height: 100vh;
-    background-image: url('../img/fundo.jpeg');
-    background-size: cover;
-    background-position: center;   
-    display: flex;
-    border-radius: 0 0 30px 30px;
-    position: relative;
-}
-
-
-#bg2{
-    width: 100%;
-    height: 120vh;
+    min-height: 120vh;
     background-color: #440E03;
-/*
-    background-image: 
-    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-    url('../img/bg2.png');
-    
-    background-size: 50% 85%;
-    background-repeat: repeat;
-    background-position: center;
-*/
-
+    padding-bottom: 40px;
 }
 
-.sobre{
+.sobre {
     font-family: 'Alfa Slab One', sans-serif;
     font-size: 35px;
-    color: white; 
+    color: white;
     display: flex;
-    width: 50%;
-    padding: 2% 0 2% 0;
-    text-align: center;
+    width: 100%;
+    padding: 4% 0 2% 0;
     justify-content: center;
+    text-align: center;
 }
-
 
 #painel {
     display: flex;
     gap: 20px;
     width: 100%;
-    height: 500px; 
-   
+    min-height: 500px;
+    padding: 0 5%;
+    align-items: center;
 }
+
 .bloco-esquerda {
     width: 50%;
     display: flex;
+    position: relative;
+    min-height: 400px;
 }
 
-#foto1{
+#foto1 {
     padding: 0 0 0 5%;
     position: absolute;
     box-sizing: border-box;
     z-index: 2;
+    top: 0;
+    left: 0;
+}
 
-}
-#foto1 img{
+#foto1 img {
     height: auto;
-    width: 25%;
+    width: 55%;
     box-shadow: 5px 5px 10px #111;
-    
+    border-radius: 6px;
 }
-#foto2{
-    padding: 30% 0 0 40%;
-    position: relative;  
-    box-sizing: border-box;   
+
+#foto2 {
+    padding: 40% 0 0 35%;
+    position: relative;
+    box-sizing: border-box;
     z-index: 0;
+    width: 100%;
 }
-#foto2 img{
+
+#foto2 img {
     height: auto;
     width: 65%;
     box-shadow: 5px 5px 10px #111;
+    border-radius: 6px;
 }
 
 .bloco-direita {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 35px;
     color: white;
-    /*color: #FF6B00;*/
     display: flex;
     justify-content: center;
-    width: 40%;
-    
-    font-size: 20px;
+    width: 50%;
+    font-size: 18px;
     align-items: center;
     text-align: center;
+    line-height: 1.7;
 }
 
-
-
-
-
-#texto{
-    
-    margin-top: 0px;
-}
-
-
-.logo{
-    font-family: 'Alfa Slab One', sans-serif;
-    font-size: 120px;
-    color: #FF6B00;
-
-   text-shadow: 2px 2px 4px black;
-}
-
-
-.txt{
-    font-family: 'Alfa Slab One', sans-serif;
-    font-size: 40px;
-    color: #c45302;
-
-    margin-top: -20px;
-
-    text-shadow: 2px 2px 5px black;
-}
-
-
-.destaque{
+/* ============================================================
+   SECTION 3 – DESTAQUES (index)
+   ============================================================ */
+.destaque {
     background-color: #111;
-    padding: 40px;
+    padding: 40px 20px;
 }
 
-.destaque h1{
+.destaque h1 {
     color: white;
     text-align: center;
-    font-size: 40px;
+    font-size: 36px;
     margin-bottom: 30px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.destaque .cards{
-    justify-content: center;
-}
-.cards{
+.cards {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
-    padding-left: 3.5%;
-        
+    justify-content: center;
 }
 
-
-.card{
+.card {
     width: 200px;
     background-color: #1a1a1a;
     padding: 10px;
     border-radius: 10px;
-   
+    transition: transform 0.2s;
 }
+.card:hover { transform: translateY(-4px); }
 
-.card img{
+.card img {
     width: 100%;
     height: 140px;
     object-fit: cover;
-
     border-radius: 8px;
 }
 
-.card h2{
+.card h2 {
     color: white;
     margin-top: 10px;
     font-size: 22px;
-
     font-family: 'Bebas Neue', sans-serif;
 }
 
-.card p{
+.card p {
     color: #cfcfcf;
     margin-top: 10px;
-    font-size: 15px;
+    font-size: 14px;
+    line-height: 1.4;
 }
 
-.card span{
+.card span {
     color: #ffe600;
-
     display: block;
-
     margin-top: 15px;
-
     font-size: 24px;
-
     font-family: 'Bebas Neue', sans-serif;
 }
-footer{
-    height: 120px;
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+footer {
+    height: 80px;
     width: 100%;
     background-color: black;
     display: flex;
-    text-align: center;
     align-items: center;
     justify-content: center;
-    flex-direction: row;
-}
-footer ul{
-    gap: 30px;
-    font-style: none;
-    list-style: none;
-   
-    display: flex;
-}
-footer ul a {
-    text-decoration: none;  
-    color: #3d3c3c;
-    font-size: 18px;
-    
-}
-.sobrelogo{
-    align-items: center;
-    width: 100%;
-    text-align: center;
-    justify-content: center;
-    background-color: yellow;
-}
-.sobrelogo img{
-    
-    width: 300px;
-    height: auto;
-}
-#lados{
-    justify-content: space-between;
-    
-    width: 60%;
-    
-    display: flex;
-}
-#sobrecontainer{
-    width: 70%;
-    border-radius: 20px;
-    background-color: yellow;
-    padding: 20px;
-}
-#fundo2{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
 }
 
-#fundokids{
+footer ul {
+    gap: 30px;
+    list-style: none;
+    display: flex;
+}
+
+footer ul a {
+    text-decoration: none;
+    color: #aaa;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    transition: color 0.2s;
+}
+footer ul a:hover { color: #ffe600; }
+
+/* ============================================================
+   AREA KIDS
+   ============================================================ */
+#body2 {
+    background-color: #111;
+}
+
+#fundokids {
     background-image: url(../img/areakids.png);
-    background-repeat; no-repeat;
     background-size: cover;
+    background-position: center;
     width: 100%;
     height: 100vh;
     display: flex;
@@ -383,228 +409,453 @@ footer ul a {
     flex-direction: column;
     justify-content: center;
     border-radius: 0 0 30px 30px;
+    padding: 80px 20px 40px;
 }
-#fundokids h1{
+
+#fundokids h1 {
     color: white;
-    width: 100%;
     font-family: 'Alfa Slab One', sans-serif;
-    font-size: 100px;
-    margin: 100px 0 0 0;
+    font-size: 80px;
+    margin: 0 0 20px 0;
+    text-shadow: 2px 2px 8px black;
 }
-#fundokids p{
+
+#fundokids p {
     color: white;
-    width: 50%;
-    
+    width: 60%;
     font-size: 18px;
-    
+    line-height: 1.6;
+    text-shadow: 1px 1px 4px black;
 }
-#reservezap2{
+
+#reservezap2 {
     border-radius: 10px;
-    box-sizing: border-box;
     background-color: green;
     height: 50px;
-    width: 230px;
+    width: 220px;
     color: white;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 18px;
     text-align: center;
     justify-content: center;
     align-items: center;
     display: flex;
     gap: 7px;
     margin-top: 5%;
-    padding: 10x;
     font-family: 'Alfa Slab One', sans-serif;
+    border: 2px solid green;
+    transition: opacity 0.2s;
 }
-#reservezap2 img{
-    height:auto;
+#reservezap2:hover { opacity: 0.85; }
+
+#reservezap2 img {
+    height: auto;
     width: 25px;
-    
     filter: invert(1) brightness(2);
 }
 
-#fundokids2{
+#fundokids2 {
     background-color: #111;
-    align-items: center;
-    height: 100vh;
     width: 100%;
-    
+    padding: 40px 20px;
 }
-#body2{
-    background-color:#111;
-}
-#nossokids{
+
+#nossokids {
     display: flex;
     justify-content: center;
+    margin-bottom: 30px;
 }
-#fundokids2 h1{ 
-    margin: 5% 0 1% 0;
-    text-shadow: 4px 4px 6px #111;
-    font-size: 40px;
+
+#fundokids2 h1 {
+    font-size: 36px;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
-} 
-#mostruario{
-    height: 400px;
+    text-align: center;
+}
+
+#mostruario {
     display: flex;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 4%;
+    gap: 20px;
     align-items: center;
 }
-.cardkids{
-    height: 300px;  
+
+.cardkids {
+    height: 300px;
     width: 220px;
     background-color: #1a1a1a;
     border-radius: 10px 30px 10px 30px;
     box-sizing: border-box;
-    padding: 1%;
+    padding: 8px;
+    overflow: hidden;
 }
-.imgcardkids{
+
+.imgcardkids {
     background-color: pink;
-    height: 250px;
-    box-sizing: border-box;
+    height: 100%;
     border-radius: 20px;
     overflow: hidden;
 }
-.imgcardkids img{
-    height: 250px;
-    width: 225px;
-    background-size: cover;
+
+.imgcardkids img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
-#fundokids3{
+
+#fundokids3 {
     display: flex;
     width: 100%;
-    background-color:#440e03;
-    height: 100vh;
+    background-color: #440e03;
+    min-height: 100vh;
     align-items: center;
+    padding: 60px 40px;
 }
-#imgkids3{
+
+#imgkids3 {
     width: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
-#imgkids3 img{
-    width: 80%;
-    height: 100vh;
 
+#imgkids3 img {
+    width: 85%;
+    height: auto;
+    max-height: 80vh;
+    object-fit: cover;
+    border-radius: 10px;
 }
-#txtkids3{
-    width: 40%;
+
+#txtkids3 {
+    width: 50%;
     color: white;
+    padding-left: 40px;
 }
-#listkids3{
 
-}
-#headkids3{
-    margin-bottom: 10%;
+#headkids3 {
+    margin-bottom: 30px;
     font-family: 'Alfa Slab One', sans-serif;
-    font-size: 25px;
-}
-#listkids3 li{
-    margin: 0 0 3% 0;
-    font-size: 20px;
+    font-size: 28px;
 }
 
-#body3{
+#listkids3 li {
+    margin: 0 0 16px 20px;
+    font-size: 17px;
+    line-height: 1.5;
+}
+
+/* ============================================================
+   SOBRE NÓS
+   ============================================================ */
+#body3 {
     background-color: #1a1a1a;
 }
-#fundosobre1{
+
+#fundosobre1 {
     margin: 0;
     width: 100%;
     height: 100vh;
     background-image: url('../img/fundosobre8.jpg');
     background-size: cover;
-    background-position: center; 
+    background-position: center;
     border-radius: 0 0 30px 30px;
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
-#fundosobre1 h1{
-    font-size: 100px;
+
+#fundosobre1 h1 {
+    font-size: 90px;
     color: white;
     font-family: 'Alfa Slab One', sans-serif;
-    margin: 0 0 3.5% 0;   
+    text-shadow: 2px 2px 8px black;
+    text-align: center;
+    padding: 0 20px;
 }
-#fundosobre2{
-    height: 100vh;
+
+#fundosobre2 {
+    min-height: 100vh;
     width: 100%;
     background-color: #1a1a1a;
+    padding: 40px 0;
 }
-#painelsobre{
+
+#painelsobre {
     display: flex;
     width: 100%;
-
+    flex-wrap: wrap;
 }
-#sobreesquerdo{
-    margin-top: 7%;
+
+#sobreesquerdo {
+    margin-top: 5%;
     width: 50%;
     color: white;
-    height: 50vh;
 }
-#headsobre{
-    width: auto;
+
+#headsobre {
     padding: 0 0 0 10%;
+    margin-bottom: 20px;
 }
-#frameinfo{
+
+#headsobre h1 {
+    font-family: 'Alfa Slab One', sans-serif;
+    font-size: 32px;
+}
+
+#frameinfo {
     display: flex;
     width: 100%;
-    height: 100%;
-    padding:  0 0 0 10%;
+    padding: 0 0 0 10%;
     box-sizing: border-box;
     margin: 3% 0 0 0;
     gap: 10%;
+    flex-wrap: wrap;
+}
 
+#iframe iframe {
+    width: 280px;
+    height: 220px;
+    border-radius: 10px;
 }
-#frameinfo iframe{
-    height: 100%;
-    box-sizing: border-box;
+
+#iframe label {
+    display: block;
+    margin-top: 8px;
+    font-size: 13px;
+    color: #aaa;
 }
-#infos{
-    width: 100%;
-    text-align: center;
-    align-items: right;
-    justify-content: center;
+
+#infos {
     display: flex;
     flex-direction: column;
-    gap: 10%;
+    gap: 20px;
+    justify-content: center;
 }
-#lados1{
+
+#lados1, #lados2 {
     display: flex;
-    gap: 10%;
-    width: 100%;   
+    gap: 16px;
+    align-items: center;
+    width: 100%;
 }
-#lados1 img{
+
+#lados1 img, #lados2 img {
     filter: invert(1) brightness(2);
     height: 30px;
     width: auto;
+    flex-shrink: 0;
 }
-#lados2{
-    display: flex;
-    gap: 10%;
-    width: 100%;   
+
+#lados1 h3, #lados2 h3,
+#lados1 p, #lados2 p {
+    font-size: 15px;
+    line-height: 1.5;
 }
-#lados2 img{
-    filter: invert(1) brightness(2);
-    height: 30px;
-    width: auto;
-}
-#painelsobre hr{
-    margin-top: 15%;
-}
-#sobredireito{
+
+#sobredireito {
     display: flex;
     text-align: center;
     width: 50%;
     align-items: center;
     justify-content: center;
-    margin-top: 7%;
-    padding: 0 5% 0 5%;
+    margin-top: 5%;
+    padding: 0 6%;
     box-sizing: border-box;
     color: white;
-    font-size: 20px;
+    font-size: 18px;
+    line-height: 1.7;
+    font-family: Arial, sans-serif;
+}
+
+/* ============================================================
+   HELPERS
+   ============================================================ */
+.sobrelogo { display: none; }
+
+/* ============================================================
+   RESPONSIVE — TABLET (≤ 900px)
+   ============================================================ */
+@media (max-width: 900px) {
+
+    /* Header */
+    .imgredonda { width: 40%; }
+    nav { width: 60%; padding-right: 15px; }
+    nav ul li { font-size: 16px; margin: 0 8px; }
+
+    /* Hero */
+    .content1 { margin: 0 0 0 8%; width: 80%; }
+    .logo { font-size: 80px; }
+    .txt { font-size: 28px; }
+
+    /* Sobre section */
+    #bg2 { min-height: auto; }
+    #painel {
+        flex-direction: column;
+        padding: 20px;
+        min-height: auto;
+    }
+    .bloco-esquerda {
+        width: 100%;
+        min-height: 300px;
+    }
+    .bloco-direita {
+        width: 100%;
+        font-size: 16px;
+        padding: 20px 0;
+    }
+
+    /* Cards */
+    .card { width: calc(50% - 20px); max-width: 220px; }
+
+    /* Kids hero */
+    #fundokids h1 { font-size: 60px; }
+    #fundokids p { width: 80%; }
+
+    /* Kids rules */
+    #fundokids3 { flex-direction: column; padding: 80px 20px 40px; }
+    #imgkids3 { width: 100%; margin-bottom: 30px; }
+    #imgkids3 img { width: 70%; max-height: 50vh; }
+    #txtkids3 { width: 100%; padding-left: 0; }
+
+    /* Sobre nós */
+    #fundosobre1 h1 { font-size: 60px; }
+    #painelsobre { flex-direction: column; }
+    #sobreesquerdo { width: 100%; }
+    #sobredireito { width: 100%; margin-top: 30px; padding: 0 8%; }
+}
+
+/* ============================================================
+   RESPONSIVE — MOBILE (≤ 600px)
+   ============================================================ */
+@media (max-width: 600px) {
+
+    /* Header mobile com hamburguer */
+    .header {
+        flex-wrap: wrap;
+        height: auto;
+        min-height: 64px;
+        padding: 8px 0;
+        background-color: rgba(0,0,0,0.6);
+    }
+
+    .imgredonda {
+        width: auto;
+        flex: 1;
+        height: 48px;
+        padding-left: 15px;
+    }
+    .imgredonda img { height: 46px; }
+
+    .menu-toggle {
+        display: flex;
+        margin-right: 15px;
+    }
+
+    nav {
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        justify-content: center;
+        transition: max-height 0.4s ease;
+    }
+
+    .menu-check:checked ~ #main-nav {
+        max-height: 500px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 0 18px;
+        background: linear-gradient(180deg, rgba(0,0,0,0.95) 0%, rgba(30,10,0,0.97) 100%);
+        border-top: 2px solid rgba(255, 230, 0, 0.3);
+        border-bottom: 2px solid rgba(255, 230, 0, 0.15);
+    }
+
+    nav ul li {
+        font-size: 20px;
+        margin: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul a {
+        display: block;
+        padding: 14px 20px;
+        transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    nav ul a:hover {
+        background: rgba(255, 230, 0, 0.1);
+        color: #ffe600 !important;
+    }
+
+    /* Hero */
+    #fundo1 {
+        border-radius: 0 0 20px 20px;
+        align-items: center;
+        justify-content: center;
+        background-position: 60% center;
+        padding: 64px 0 0;
+    }
+    .content1 {
+        margin: 0 auto;
+        width: 100%;
+        padding: 40px 24px 50px;
+        justify-content: center;
+        text-align: center;
+        background: linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 100%);
+    }
+    .logo { font-size: 80px; line-height: 0.9; }
+    .txt { font-size: 20px; margin-top: 4px; }
+    .botoes { justify-content: center; gap: 12px; margin-top: 28px; }
+    #reservezap, #cardapio {
+        width: 155px;
+        font-size: 15px;
+        height: 46px;
+    }
+
+    /* Sobre */
+    .sobre { font-size: 26px; padding: 30px 10px 20px; }
+    #painel { padding: 10px 15px; }
+    .bloco-esquerda { min-height: 250px; }
+    .bloco-direita { font-size: 15px; }
+
+    /* Cards */
+    .cards { padding: 0 10px; }
+    .card { width: 100%; max-width: 340px; }
+
+    /* Kids hero */
+    #fundokids { border-radius: 0 0 20px 20px; padding: 70px 15px 30px; }
+    #fundokids h1 { font-size: 48px; }
+    #fundokids p { width: 100%; font-size: 15px; }
+    #reservezap2 { width: 200px; font-size: 15px; }
+
+    /* Kids mostruario — 2 por linha */
+    .cardkids { width: calc(50% - 10px); height: 200px; }
+
+    /* Kids rules */
+    #fundokids3 { padding: 80px 15px 40px; }
+    #imgkids3 img { width: 90%; }
+    #headkids3 { font-size: 22px; }
+    #listkids3 li { font-size: 15px; }
+
+    /* Sobre nós */
+    #fundosobre1 h1 { font-size: 44px; }
+    #headsobre { padding: 0 0 0 5%; }
+    #frameinfo {
+        flex-direction: column;
+        gap: 24px;
+        padding: 0 5%;
+    }
+    #iframe iframe { width: 100%; height: 200px; }
+    #sobredireito { padding: 0 5%; margin-top: 20px; font-size: 16px; }
+
+    /* Footer */
+    footer ul { flex-direction: column; align-items: center; gap: 12px; }
+    footer { height: auto; padding: 20px 0; }
 }

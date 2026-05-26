@@ -3,175 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Ô Véi JP</title>
-
     <link rel="stylesheet" href="css/estilo.css">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Alfa+Slab+One&display=swap" rel="stylesheet">
 </head>
 
 <body id="body1">
 
     <section id="fundo1">
         <div class="header">
+            <input type="checkbox" id="menu-check" class="menu-check">
             <div class="imgredonda">
-                <img src="img/logo.png">
+                <img src="img/logo.png" alt="Logo Ô Véi">
             </div>
 
-            <nav>
+            <label for="menu-check" class="menu-toggle" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <nav id="main-nav">
                 <ul>
-                    <a href="index.html" class="desligado">
-                    <li>Home</li>
-                    </a>
-
-                    <a href="view/areakids.html">
-                    <li>Área Kids</li>
-                    </a>
-
-                    <a href="view/sobrenos.html">
-                    <li>Sobre Nós</li>
-                    </a>
+                    <a href="index.html" class="desligado"><li>Home</li></a>
+                    <a href="view/areakids.html"><li>Área Kids</li></a>
+                    <a href="view/sobrenos.html"><li>Sobre Nós</li></a>
                 </ul>
             </nav>
         </div>
-        <div class="content1">
 
+        <div class="content1">
             <div id="texto">
                 <h1 class="logo">Ô VÉI</h1>
-
-                <h2 class="txt">
-                    Lanchonete e Petiscaria
-                </h2>
+                <h2 class="txt">Lanchonete e Petiscaria</h2>
                 <div class="botoes">
                     <a href="" id="reservezap">
-                        <img src="img/zapzap.svg">
+                        <img src="img/zapzap.svg" alt="WhatsApp">
                         <span>Reserve aqui</span>
                     </a>
-                    <a href="download/cardapio.pdf" id="cardapio">  
-                        <img src="img/download.svg">
+                    <a href="download/cardapio.pdf" id="cardapio">
+                        <img src="img/download.svg" alt="Download">
                         <span>Cardápio</span>
                     </a>
                 </div>
-
             </div>
         </div>
     </section>
 
-       
-
     <section id="bg2">
-        
         <div class="sobre">
-            <h1>Sobre Ô Véi </h1>
+            <h1>Sobre Ô Véi</h1>
         </div>
-            <div id="painel">
-                <div class="bloco-esquerda">
-                    <div id="foto1">
-                        <img src="./img/foto1.jpg" alt="Imagens do parque">
-                    </div>
-                    <div id="foto2">
-                        <img src="./img/foto2.jpg" alt="Imagens do parque">
-                    </div>
+        <div id="painel">
+            <div class="bloco-esquerda">
+                <div id="foto1">
+                    <img src="./img/foto1.jpg" alt="Imagens do parque">
                 </div>
-
-                <div class="bloco-direita">
-                    O Ô Véi, Bar & Petiscaria, é o lugar ideal para quem busca boa comida, bebida gelada e um ambiente acolhedor para curtir com amigos e família. Com um clima descontraído e cheio de personalidade, o espaço reúne petiscos saborosos, pratos regionais, música, diversão e aquele atendimento que faz todo mundo se sentir em casa.
-
-                    Mais do que um bar, o Ô Véi é um ponto de encontro para criar memórias, dar boas risadas e aproveitar momentos especiais em João Pessoa.
-      
+                <div id="foto2">
+                    <img src="./img/foto2.jpg" alt="Imagens do parque">
                 </div>
             </div>
-     
-        
-        </section>
-        <section class="destaque" id="destaque">
+            <div class="bloco-direita">
+                O Ô Véi, Bar & Petiscaria, é o lugar ideal para quem busca boa comida, bebida gelada e um ambiente acolhedor para curtir com amigos e família. Com um clima descontraído e cheio de personalidade, o espaço reúne petiscos saborosos, pratos regionais, música, diversão e aquele atendimento que faz todo mundo se sentir em casa.
+                <br><br>
+                Mais do que um bar, o Ô Véi é um ponto de encontro para criar memórias, dar boas risadas e aproveitar momentos especiais em João Pessoa.
+            </div>
+        </div>
+    </section>
 
+    <section class="destaque" id="destaque">
         <h1>Destaques do Nosso Cardápio</h1>
-
         <div class="cards">
-
             <div class="card">
-                <img src="img/tabua.jpg">
-
+                <img src="img/tabua.jpg" alt="Tábua Mista">
                 <h2>Tábua Mista</h2>
-
-                <p>
-                    Uma combinação perfeita para compartilhar.
-                </p>
-
+                <p>Uma combinação perfeita para compartilhar.</p>
                 <span>R$ 79,90</span>
             </div>
-
             <div class="card">
-                <img src="img/batata.jpg">
-
+                <img src="img/batata.jpg" alt="Fuga das Galinhas">
                 <h2>Fuga das Galinhas</h2>
-
-                <p>
-                    Iscas de Filé de Frango Empanado com Fritas.
-                </p>
-
+                <p>Iscas de Filé de Frango Empanado com Fritas.</p>
                 <span>R$ 34,90</span>
             </div>
-
             <div class="card">
-                <img src="img/macaxeira.jpg">
-
+                <img src="img/macaxeira.jpg" alt="Purê de Macaxeira">
                 <h2>Purê de Macaxeira</h2>
-
-                <p>
-                    Quentinho e perfeito pra qualquer hora.
-                </p>
-
+                <p>Quentinho e perfeito pra qualquer hora.</p>
                 <span>R$ 24,90</span>
             </div>
-
             <div class="card">
-                <img src="img/drink.jpg">
-
+                <img src="img/drink.jpg" alt="Drinks">
                 <h2>Drinks</h2>
-
-                <p>
-                    Diversas opções para todos os gostos.
-                </p>
-
+                <p>Diversas opções para todos os gostos.</p>
                 <span>R$ 19,00</span>
             </div>
-
             <div class="card">
-                <img src="img/camarao.jpg">
-
+                <img src="img/camarao.jpg" alt="Camarão">
                 <h2>Camarão</h2>
-
-                <p>
-                    O melhor camarão empanado!
-                </p>
-
+                <p>O melhor camarão empanado!</p>
                 <span>R$ 12,00</span>
             </div>
-
         </div>
-
     </section>
 
     <footer>
         <ul>
-            <li>
-                <a href="https://www.instagram.com/ovei_jp?igsh=M2ExaTZicTJqOHRp" target="_blank"><span>Instagram</span></a>
-            </li>
-            <li>
-                <a href="" target="_blank"><span>Whatsapp</span></a>
-            </li>
-            <li>
-                <a href="https://www.tiktok.com/@ovei_jp?_r=1&_t=ZS-96eGcxiAHg8" target="_blank"><span>TikTok</span></a>
-            </li>
+            <li><a href="https://www.instagram.com/ovei_jp?igsh=M2ExaTZicTJqOHRp" target="_blank"><span>Instagram</span></a></li>
+            <li><a href="" target="_blank"><span>Whatsapp</span></a></li>
+            <li><a href="https://www.tiktok.com/@ovei_jp?_r=1&_t=ZS-96eGcxiAHg8" target="_blank"><span>TikTok</span></a></li>
         </ul>
     </footer>
+
 </body>
 </html>
-
-
