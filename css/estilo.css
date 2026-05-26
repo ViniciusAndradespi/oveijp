@@ -755,6 +755,7 @@ footer ul a:hover { color: #ffe600; }
 
     nav {
         width: 100%;
+        height: auto;
         max-height: 0;
         overflow: hidden;
         justify-content: center;
