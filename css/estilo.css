@@ -195,7 +195,7 @@ nav ul a {
 #reservezap img {
     height: auto;
     width: 25px;
-    filter: invert(0) brightness(1);
+    filter: invert(1) brightness(1);
 }
 
 #cardapio {
@@ -219,7 +219,7 @@ nav ul a {
 #cardapio img {
     height: auto;
     width: 20px;
-    filter: invert(0) brightness(1);
+    filter: invert(1) brightness(1);
 }
 
 /* ============================================================
@@ -451,7 +451,7 @@ footer ul a:hover { color: #ffe600; }
 #reservezap2 img {
     height: auto;
     width: 25px;
-    filter: invert(0) brightness(1);
+    filter: invert(1) brightness(1);
 }
 
 #fundokids2 {
@@ -642,7 +642,7 @@ footer ul a:hover { color: #ffe600; }
 }
 
 #lados1 img, #lados2 img {
-    filter: invert(0) brightness(1);
+    filter: invert(1) brightness(1);
     height: 30px;
     width: auto;
     flex-shrink: 0;
